@@ -12,7 +12,7 @@ This is a simple Laravel-based shopping cart application that includes product l
 ## Installation
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-repo/laravel-shopping-cart.git
+git clone [https://github.com/your-repo/laravel-shopping-cart.git](https://github.com/hasanuzzamanpriyam/Laravel_Shopping_Cart.git)
 cd laravel-shopping-cart
 ```
 
