@@ -16,27 +16,17 @@ git clone https://github.com/your-repo/laravel-shopping-cart.git
 cd laravel-shopping-cart
 ```
 
-### 2. Install Dependencies
-```bash
-composer install
-npm install
-```
 
-### 3. Set Up Environment
-Copy the `.env.example` file and rename it to `.env`:
-```bash
-cp .env.example .env
-```
-Then generate the application key:
+### 2. Generate the application key (If Needed):
 ```bash
 php artisan key:generate
 ```
 
-### 4. Serve the Application
+### 3. Serve the Application
 ```bash
 php artisan serve
 ```
-The application will be available at: `http://127.0.0.1:8000/products`
+The application will be available at: `http://127.0.0.1:8000/`
 
 ## Usage
 - **Search Products**: Enter a keyword in the search bar to filter products.
@@ -44,30 +34,6 @@ The application will be available at: `http://127.0.0.1:8000/products`
 - **Remove Products**: Click "Remove" to delete items from the cart.
 - **Discount System**: If you add 3 or more items, a 10% discount is applied dynamically.
 
-## Routes
-| Method | URI        | Description |
-|--------|------------|-------------|
-| GET    | /products  | Display the product listing |
-| POST   | /cart/add  | Add a product to the cart |
-| POST   | /cart/remove | Remove a product from the cart |
-
-## Troubleshooting
-### 1. 404 Error on `/products`
-- Ensure the route exists by running:
-```bash
-php artisan route:list
-```
-- Try clearing the cache:
-```bash
-php artisan route:clear
-php artisan cache:clear
-php artisan config:clear
-php artisan view:clear
-```
-
-### 2. Search Not Working
-- Ensure the search form is pointing to `route('products.index')` in the Blade file.
-- Check `CartController.php` for correct query filtering logic.
 
 ## License
 This project is open-source and available under the MIT License.
